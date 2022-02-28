@@ -33,7 +33,7 @@ export function Projects() {
                                 <div key={index.toString()} className="project hover-me">
                                     <a href={project.link}>
                                     <h3 className="title">{project.title}</h3>
-                                    <img src={project.cover} />
+                                    <img src={"/pages" + project.cover} />
                                     
                                     <div className="description">{project.description}</div>
                                     

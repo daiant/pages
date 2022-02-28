@@ -19,7 +19,7 @@ export function Scroll() {
         window.scrollBy(0, 200);
     }
     return (<>
-        {width > 768 && scroll &&
-        <div className="welcome_button hover-me scroll_next" onClick={scrollNext}><img src="/arrow.svg" alt="Scroll"/></div>}
+        {width > 768 && scroll && false &&
+        <div className="welcome_button hover-me scroll_next" onClick={scrollNext}><img src="/pages/arrow.svg" alt="Scroll"/></div>}
     </>)
 }

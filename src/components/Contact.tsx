@@ -26,7 +26,7 @@ export function Contact() {
                 <div className="links_list">
                     {links.map((link, index) => (
                     <div className="link_item" key={index}>
-                        <a href={link.src} className="hover-me"><img className="link_item_img" src={link.svg} alt={link.title} />{link.title}</a>
+                        <a href={link.src} className="hover-me"><img className="link_item_img" src={"/pages" + link.svg} alt={link.title} />{link.title}</a>
                     </div>
                     ))}
                 </div>

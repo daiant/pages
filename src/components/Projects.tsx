@@ -18,8 +18,10 @@ export function Projects() {
     const projects = [
         new Repo("/tara.png", "Tara Movies", "Aplicación de Streaming de películas independientes y difíciles de encontrar.", 
                    "https://github.com/Tara-Software/tara-movies", [{title: "Behance", content: "https://www.behance.net/gallery/137875131/Tara-Movies"}, {title: "Github", content: "https://github.com/Tara-Software/tara-movies"}]),
-        new Repo("/zara.png", "Lo de Zara", "Repositorio de toda la ropa de diferentes marcas con compras InApp.", "www.google.com", []),
-        new Repo("/pages.png", "Portfolio", "Landing Page que resume los proyectos en los que he estado involucrado.", "https://github.com/daiant", [{title: "Github", content: "https://github.com/daiant"}])
+        new Repo("/zara.png", "Painter", "Repositorio de toda la ropa de diferentes marcas con compras InApp.", "https://daiant.github.io/painter", [{title: "Github", content: "https://github.com/daiant/painter"}]),
+        new Repo("/kiwi.png", "Kiwi T9", "Demo de una interfaz de un teclado predictivo.", "https://daiant.github.io/Kiwi-T9/", [{title: "Github", content: "https://github.com/daiant/Kiwi-T9"}]),
+        new Repo("/pages.png", "Portfolio", "Landing Page que resume los proyectos en los que he estado involucrado.", "https://github.com/daiant", [{title: "Github", content: "https://github.com/daiant"}]),
+
     ]    
 
     return (<>

@@ -51,6 +51,10 @@ header {
   font-weight: bold;
   margin-left: 5%;
 }
+.header_index img {
+  height: 64px;
+  width: auto;
+}
 .navigation {
   position: relative;
   margin-right: 2em;
@@ -144,8 +148,10 @@ header {
   max-width: 450px;
 }
 .welcome_title {
-  font-size: 32px;
+  font-size: 3rem;
+font-size: clamp(3rem, 2.6rem + 2vw, 5rem);
   color: #182D11;
+  margin: 0;
 }
 .welcome_name {
   position: relative;
@@ -334,6 +340,7 @@ header {
 
 .links_list {
   display: flex;
+  flex-wrap: wrap;
   margin: 2em 0;
   gap: 10px;
 }

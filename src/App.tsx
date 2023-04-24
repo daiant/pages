@@ -58,7 +58,6 @@ function App() {
     visible.current = window.innerWidth > 768;
     if (visible.current) {
       dot.current.style.display = 'block';
-      dot.current.style.zIndex = '98';
       dotOutline.current.style.display = 'block';
     }
     let hover_elements = document.getElementsByClassName("hover-me");

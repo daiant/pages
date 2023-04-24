@@ -361,7 +361,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
-  justify-content: space-around;
+  justify-content: flex-start; 
 }
 .project {
   width: 100%;

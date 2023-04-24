@@ -4,9 +4,12 @@ import { setConstantValue } from "typescript"
 export function Navigation() {
   const [nav, setNav] = useState(false);
 
-  const handleNavigation = () => {
-    setTimeout(() => setNav(!nav), 10);
-
+  const handleNavigation = (event: React.MouseEvent) => {
+    setNav((prevValue) => {
+      (document.querySelector('#menu_checkbox') as HTMLInputElement).checked = !prevValue;
+      return !prevValue;
+    });
+    event.stopPropagation();
   }
   const goto = (link: string) => {
     let element = document.getElementById(link);
@@ -27,7 +30,7 @@ export function Navigation() {
         <div id="cover" className="hover-me" onClick={handleNavigation}>
           <div id="menu_button">
             <input type="checkbox" name="checkbox" id="menu_checkbox" />
-            <label htmlFor="menu_checkbox" id='menu_label'>
+            <label id='menu_label'>
               <div id="menu_text_bar" style={{ backgroundColor: nav ? "white" : "black" }}></div>
             </label>
           </div>

@@ -38,9 +38,8 @@ header {
   left: 0;
   display: flex;
   align-items: center;
-  padding-top: 10px;
+  padding-block: 16px;
   width: 100vw;
-  height: 70px;
   z-index: 1;
   transition: all 0.1s ease;
   background-color: white;
@@ -52,7 +51,7 @@ header {
   margin-left: 5%;
 }
 .header_index img {
-  height: 64px;
+  height: 48px;
   width: auto;
 }
 .navigation {
@@ -347,14 +346,11 @@ font-size: clamp(3rem, 2.6rem + 2vw, 5rem);
   border-radius: 50%;
 }
 .projects_wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   row-gap: 10px;
-  justify-content: flex-start; 
 }
 .project {
-  width: 100%;
-  max-width: 450px;
   padding: 1em 2em;
   border: 1px solid transparent;
   position: relative;

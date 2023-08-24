@@ -33,7 +33,7 @@ export function Projects() {
             projects.map((project: Repo, index: number) => {
               return (
                 <div key={index.toString()} className="project hover-me">
-                  <a href={project.link}>
+                  <a href={project.link} tabIndex={-1}>
                     <h3 className="title">{project.title}</h3>
                     <div className="img__wrapper"><img src={"/pages" + project.cover} /></div>
 

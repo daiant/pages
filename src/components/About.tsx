@@ -4,7 +4,7 @@ const aboutData = {
   description: {
     __html: "<p>Soy Carlos Sendra Gisbert, un recién licenciado que intenta hacerse un hueco en el mundo del desarrollo web. </p>\
                           <p>Mi objetivo es crear de la web un espacio amigable, moderno y mucho más bonito de lo que está ahora.</p>\
-                          <p>Me especializo en React, NextJS y NodeJS, aunque siempre estoy dispuesto a aprender nuevas tecnologías!</p>"
+                          <p>Me especializo en Angular, React, NextJS y NodeJS, aunque siempre estoy dispuesto a aprender nuevas tecnologías!</p>"
   },
   links: [
     {

@@ -5,13 +5,13 @@ body {
   margin: 0;
   font-family: 'Fira Sans', sans-serif;
   /* scroll-snap-type: y mandatory; */
-  background-color: white;
+  background-color: var(--bg-color);
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--fg-color);
 }
 
 a:visited {
@@ -24,7 +24,7 @@ a:visited {
 }
 
 :root {
-  --bg-color: #DBD5D3;
+  --bg-color: #f7faf7;
   --fg-color: #182D11;
   --fg-light-color: #759B69;
   --accent-color: #EB7E1E;
@@ -36,8 +36,20 @@ a:visited {
   transition: all 0.3s ease-in;
 }
 
+a.hover-me {
+  transition: none;
+}
+
 a.hover-me:hover {
   text-decoration: underline;
+}
+
+a.hover-me:active,
+a.hover-me:focus,
+a:active,
+a:focus {
+  outline: 1px solid;
+  outline-offset: 4px;
 }
 
 header {
@@ -50,7 +62,7 @@ header {
   width: 100vw;
   z-index: 1;
   transition: all 0.1s ease;
-  background-color: white;
+  background-color: var(--bg-color);
   /* background-color: var(--bg-color); */
 }
 
@@ -61,6 +73,7 @@ header {
 }
 
 .header_index img {
+  cursor: pointer;
   height: 48px;
   width: auto;
 }
@@ -137,8 +150,8 @@ header {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto 50px 0;
-  padding: 10px 20px;
+  margin: 0 auto 36px 0;
+  padding: 6px 20px;
   color: var(--bg-color);
 }
 
@@ -170,6 +183,7 @@ header {
 
 .welcome_wrapper p {
   max-width: 450px;
+  font-size: 1.25em;
 }
 
 .welcome_title {
@@ -207,7 +221,8 @@ header {
   transition: box-shadow 0.3s ease;
 }
 
-.welcome_button:hover {
+.welcome_button:hover,
+.welcome_button:focus {
   box-shadow: 7px 7px 0px 1px #182D11;
 }
 
@@ -245,7 +260,7 @@ header {
 }
 
 #menu_label {
-  color: black;
+  color: var(--fg-color);
   position: relative;
   display: block;
   height: 29px;
@@ -258,7 +273,7 @@ header {
   left: 0;
   width: 100%;
   height: 5px;
-  background-color: black;
+  background-color: var(--fg-color);
 }
 
 #menu_label:before,
@@ -269,12 +284,12 @@ header {
 
 #menu_label:before {
   top: 0;
-  background-color: black;
+  background-color: var(--fg-color);
 }
 
 #menu_label:after {
   top: 12px;
-  background-color: black;
+  background-color: var(--fg-color);
 }
 
 #menu_text_bar {
@@ -362,12 +377,19 @@ header {
 }
 
 .blue {
-  background-image: url("../public/bg-alpha.png");
-  /*box-shadow: inset 0 0 5em 1em rgba(0, 0, 0, 0.356);*/
-  background-size: cover;
-  background-position: center;
-  padding-top: 0 !important;
+  position: relative;
   height: 100vh;
+}
+
+.img__absolute {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .section {
@@ -424,12 +446,12 @@ header {
 }
 
 .project {
-  padding: 1em 2em;
+  padding: 1em;
   border: 1px solid transparent;
   position: relative;
   transition: 0.5s;
   z-index: 0;
-
+  background-color: #fafafa;
 }
 
 .project:hover {
@@ -442,7 +464,7 @@ header {
 }
 
 .project .img__wrapper {
-  border: 1px solid black;
+  border: 1px solid var(--fg-color);
   margin-bottom: 1em;
   overflow: hidden;
 }
@@ -469,11 +491,11 @@ header {
 
 .project .title,
 .project .description {
-  color: black !important;
+  color: var(--fg-color) !important;
 }
 
 .contact_wrapper a {
-  color: black;
+  color: var(--fg-color);
 }
 
 .contact_wrapper .underline {
@@ -488,137 +510,4 @@ header {
   .section-wrapper {
     margin-top: 10em;
   }
-}
-
-/** GAME **/
-/* * {
-  cursor: none;
-} */
-.cursor-dot,
-.cursor-dot-outline {
-  pointer-events: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  opacity: 1;
-  transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
-  z-index: 9;
-  display: none;
-}
-
-.cursor-dot {
-  width: 25px;
-  height: 25px;
-  background: white;
-  mix-blend-mode: difference;
-  background-blend-mode: difference;
-  border: none;
-}
-
-.cursor-dot-outline {
-  width: 25px;
-  height: 25px;
-  border: 2px solid black;
-  background: transparent;
-  z-index: 99999;
-}
-
-.ripple {
-  top: 50%;
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  position: fixed;
-  transform: translate(-50%, -50%);
-}
-
-.ripple::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: transparent;
-  border: 2px solid black;
-  border-radius: 100%;
-  z-index: 99999;
-  opacity: 0;
-}
-
-.ripple.up::after {
-  z-index: 99999;
-
-  animation: ripple 1s cubic-bezier(0.57, 0.12, 0, 0.92);
-}
-
-@keyframes ripple {
-  from {
-    height: 0;
-    width: 0;
-    opacity: 1;
-  }
-
-  to {
-    height: 250%;
-    width: 250%;
-    opacity: 0;
-  }
-}
-
-.enemy {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-image: url("../public/ufo.svg");
-  width: 50px;
-  height: 50px;
-  z-index: 999;
-  transition: top 0.1s ease, left 0.1s ease, transform 0.2s ease, opacity 0.5s ease;
-  opacity: 0;
-  animation: appear 1s ease forwards;
-}
-
-.ded {
-  transition: transform 0s linear !important;
-  animation: dead 1s ease;
-}
-
-@keyframes appear {
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes dead {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1.4) rotate(720deg);
-    opacity: 0;
-  }
-}
-
-.scroll_next {
-  position: fixed;
-  user-select: none;
-  bottom: 2em;
-  width: calc(2em + 50px);
-  height: calc(50px);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--fg-light-color);
-}
-
-.scroll_next img {
-  width: 50px;
-  height: auto;
-  filter: invert(1);
-
 }

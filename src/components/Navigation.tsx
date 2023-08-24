@@ -23,7 +23,7 @@ export function Navigation() {
     <header>
       <div className="header_index">
         {/* <span className="welcome_name header_name hover-me" onClick={() => goto("index")}>Carlos</span> */}
-        <img src="/pages/logo.svg" onClick={() => goto("index")}></img>
+        <img src="/pages/logo.svg" onClick={() => goto("index")} alt="Logo de Carlos"></img>
       </div>
       <nav className="navigation">
         <div id="cover" className="hover-me" onClick={handleNavigation}>

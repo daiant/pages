@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { setConstantValue } from "typescript"
 
 export function Navigation() {
   const [nav, setNav] = useState(false);
@@ -39,10 +38,9 @@ export function Navigation() {
           <div className="bg_nav"></div>
           <ul className={nav ? "ul_nav show_ul" : "ul_nav"}>
             <li onClick={() => goto("index")} className="nav_item hover-me">Inicio</li>
-            {/* <li onClick={() => goto("inicio")}className="nav_item">Soluciones</li> */}
-            <li onClick={() => goto("proyectos")} className="nav_item hover-me">Proyectos</li>
-            <li onClick={() => goto("sobre-mi")} className="nav_item hover-me">Sobre mí</li>
-            <li onClick={() => goto("contacto")} className="nav_item hover-me">Contacto</li>
+            <li onClick={() => goto("projects")} className="nav_item hover-me">Proyectos</li>
+            <li onClick={() => goto("about")} className="nav_item hover-me">Sobre mí</li>
+            <li onClick={() => goto("contact")} className="nav_item hover-me">Contacto</li>
           </ul>
         </div>
       </nav>

@@ -17,8 +17,8 @@ export function Index() {
           <h1 className="welcome_title"><span className="welcome_name" id="scrollable_name">Carlos</span></h1>
           <p>{welcomeContent.description}</p>
           <div className="button_wrapper">
-            <button className="welcome_button hover-me" onClick={() => goto("proyectos")}>Mis proyectos</button>
-            <button className="welcome_button hover-me invert" onClick={() => goto("contacto")}>{welcomeContent.button}</button>
+            <button className="welcome_button hover-me" onClick={() => goto("projects")}>Mis proyectos</button>
+            <button className="welcome_button hover-me invert" onClick={() => goto("contact")}>{welcomeContent.button}</button>
           </div>
         </div>
       </div>
